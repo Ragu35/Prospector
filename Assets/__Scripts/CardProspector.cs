@@ -42,6 +42,11 @@ public class CardProspector : Card { // Make sure CardProspector extends Card
 	
 	public SlotDef                slotDef;
 	
+	//This allows the card to react to being clicked
+	override public void OnMouseUpAsButton() {
+		Prospector.S.CardClicked (this);
 
+		base.OnMouseUpAsButton ();
+	}
 }
 
